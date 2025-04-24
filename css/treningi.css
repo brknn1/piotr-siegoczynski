@@ -1,0 +1,144 @@
+/* Форма записи на тренировку */
+.offer .cta-section {
+    background-color: var(--background-color);
+    border: 1px solid var(--secondary-color);
+    border-radius: 12px;
+    padding: 3rem;
+    margin: 3rem auto;
+    max-width: 600px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.offer .cta-section h2 {
+    color: var(--secondary-color);
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    position: relative;
+}
+
+.offer .cta-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -0.8rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 2px;
+    background-color: var(--secondary-color);
+}
+
+.training-form {
+    width: 100%;
+}
+
+.training-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.training-form .form-group input,
+.training-form .form-group select,
+.training-form .form-group textarea {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--background-color);
+    border: 1px solid var(--secondary-color);
+    border-radius: 8px;
+    color: var(--text-color);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.training-form .form-group select {
+    appearance: none;
+    background-color: transparent;
+    border: 2px solid var(--secondary-color);
+    padding: 1.2rem;
+    cursor: pointer;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ff0000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1.2em;
+    font-weight: 500;
+}
+
+.training-form .form-group select:hover {
+    background-color: rgba(255, 0, 0, 0.05);
+}
+
+.training-form .form-group select option {
+    padding: 1rem;
+    font-size: 1.1rem;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.training-form .form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+    line-height: 1.5;
+}
+
+.training-form .form-group input:focus,
+.training-form .form-group select:focus,
+.training-form .form-group textarea:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 0, 0, 0.1);
+    border-color: var(--secondary-color);
+    background-color: var(--background-color);
+}
+
+.training-form .btn {
+    width: 100%;
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 1rem;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    margin-top: 1rem;
+}
+
+.training-form .btn:hover {
+    background-color: #cc0000;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(255, 0, 0, 0.2);
+}
+
+.training-form .btn:active {
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .offer .cta-section {
+        padding: 2.5rem;
+        margin: 2rem 15px;
+    }
+
+    .offer .cta-section h2 {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+    }
+
+    .training-form .form-group {
+        margin-bottom: 1.5rem;
+    }
+
+    .training-form .form-group input,
+    .training-form .form-group select,
+    .training-form .form-group textarea {
+        padding: 1rem;
+        font-size: 1rem;
+    }
+
+    .training-form .btn {
+        padding: 1.1rem;
+        font-size: 1.1rem;
+    }
+} 

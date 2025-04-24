@@ -1,0 +1,255 @@
+/* About Page Styles */
+.about-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/about-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #FFFFFF;
+    padding-top: 4rem;
+    position: relative;
+}
+
+.about-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background-color: var(--secondary-color);
+    z-index: 1;
+}
+
+.about-hero h1 {
+    font-size: 3.5rem;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.about-content {
+    padding: 80px 0;
+    background-color: #FFFFFF;
+}
+
+.about-intro {
+    max-width: 800px;
+    margin: 0 auto 60px;
+    text-align: center;
+}
+
+.about-intro h2 {
+    color: var(--secondary-color);
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.about-intro .lead {
+    font-size: 1.5rem;
+    color: #1A365D;
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+
+.about-intro p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #4A5568;
+    margin-bottom: 20px;
+}
+
+/* Career Timeline */
+.career-timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto 80px;
+    padding: 40px 0;
+}
+
+.career-timeline::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background-color: var(--secondary-color);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -1px;
+}
+
+.timeline-item {
+    position: relative;
+    width: 50%;
+    padding: 20px 40px;
+    box-sizing: border-box;
+}
+
+.timeline-item:nth-child(odd) {
+    left: 0;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+}
+
+.year {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: var(--secondary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #FFFFFF;
+    top: 20px;
+}
+
+.timeline-item:nth-child(odd) .year {
+    right: -50px;
+}
+
+.timeline-item:nth-child(even) .year {
+    left: -50px;
+}
+
+.career-timeline .timeline-item .content {
+    background-color: #F8FAFC;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.career-timeline .timeline-item h3 {
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+.career-timeline .timeline-item .content h3,
+.career-timeline .timeline-item .content p {
+    color: #000000 !important;
+}
+
+/* Achievements */
+.achievements {
+    margin-bottom: 80px;
+}
+
+.achievements h2 {
+    text-align: center;
+    color: var(--secondary-color);
+    margin-bottom: 40px;
+}
+
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.achievement {
+    text-align: center;
+    padding: 30px;
+    background-color: #F8FAFC;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.achievement:hover {
+    transform: translateY(-10px);
+}
+
+.achievement .icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.achievement h3,
+.achievement p {
+    color: #000000;
+}
+
+/* Philosophy */
+.philosophy {
+    margin-bottom: 60px;
+}
+
+.philosophy h2 {
+    text-align: center;
+    color: var(--secondary-color);
+    margin-bottom: 40px;
+}
+
+.philosophy-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.philosophy-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #4A5568;
+}
+
+.philosophy-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .career-timeline::before {
+        left: 30px;
+    }
+
+    .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+
+    .timeline-item:nth-child(even) {
+        left: 0;
+    }
+
+    .year {
+        width: 60px;
+        height: 60px;
+        font-size: 1rem;
+    }
+
+    .timeline-item:nth-child(odd) .year,
+    .timeline-item:nth-child(even) .year {
+        left: 0;
+        right: auto;
+    }
+
+    .achievements-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .philosophy-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .achievements-grid {
+        grid-template-columns: 1fr;
+    }
+} 
